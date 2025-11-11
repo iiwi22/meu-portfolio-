@@ -11,7 +11,7 @@ document.querySelectorAll("a").forEach(link => {
   });
 });
 
-// Validação do formulário
+// Validação simples do formulário
 const form = document.getElementById("formContato");
 if (form) {
   form.addEventListener("submit", e => {
