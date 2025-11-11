@@ -1,64 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sobre — Josué Archetti</title>
+  <meta charset="UTF-8">
+  <title>Sobre Mim - Josué Archetti</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
-  <header class="header">
-    <div class="brand">
-      <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden>
-        <rect width="24" height="24" rx="5" fill="#001"/>
-        <path d="M3 12h18" stroke="#00ff99" stroke-width="1.2" opacity="0.9"/>
-      </svg>
-      <div>
-        <h1>Josué Archetti</h1>
-        <small>Future Cybersecurity Specialist</small>
-      </div>
-    </div>
-
-    <nav class="nav">
+<body class="fade-in">
+  <header>
+    <h1>Josué Archetti</h1>
+    <nav>
       <a href="index.html">Início</a>
-      <a href="sobre.html" class="active">Sobre</a>
+      <a href="sobre.html">Sobre Mim</a>
       <a href="habilidades.html">Habilidades</a>
       <a href="projetos.html">Projetos</a>
       <a href="contato.html">Contato</a>
     </nav>
   </header>
 
-  <main class="container">
-    <section class="card">
-      <h2>Sobre Mim</h2>
-      <p style="color:var(--muted); font-size:15px;">
-        Meu nome é <strong>Josué Archetti</strong>, tenho 22 anos e sou apaixonado por segurança da informação. Desde cedo deixei de ver computadores apenas como máquinas e passei a enxergá-los como sistemas complexos onde cada protocolo, serviço e porta pode contar uma história.
-      </p>
+  <main>
+    <h2>Sobre Mim</h2>
+    <p>Tenho 22 anos e sou apaixonado por tecnologia, especialmente pela área de cibersegurança. Desde jovem, sempre tive curiosidade sobre como os sistemas funcionam e como protegê-los de ameaças. Essa paixão me levou a estudar Ciências da Computação e a explorar o universo da segurança digital, buscando sempre entender mais sobre redes, servidores e ética hacker.</p>
 
-      <p style="color:var(--muted); margin-top:10px;">
-        Ao longo da minha jornada acadêmica e pessoal, estudei redes, sistemas operacionais (com foco em Linux), linguagens básicas de script e técnicas iniciais de pentest — sempre com uma abordagem ética e educacional. Participei de pequenos projetos e estudos de caso que envolvem varredura de rede, análise de logs e simulações de ataques em ambiente controlado.
-      </p>
-
-      <p style="color:var(--muted); margin-top:10px;">
-        Me considero autodidata, curioso e determinado. Busco sempre aprender com fontes práticas: executar, analisar e mitigar. Meu objetivo de carreira é atuar como analista de segurança, trabalhando com defesa, resposta a incidentes e hardening de sistemas, e futuramente me especializar em pentest e análise forense.
-      </p>
-
-      <p style="color:var(--muted); margin-top:10px;">
-        Este portfólio reúne uma amostra do que construí e estudei — se quiser conversar sobre projetos, oportunidades ou colaborações, use a página de contato.
-      </p>
-    </section>
+    <p>Meu objetivo é seguir carreira na área de segurança da informação, ajudando pessoas e empresas a protegerem seus dados com responsabilidade e conhecimento técnico. Acredito que o aprendizado é constante e que a tecnologia pode ser usada como ferramenta de evolução, não destruição.</p>
   </main>
 
-<script>
-  document.querySelectorAll('.nav a').forEach(a=>{
-    a.addEventListener('click', function(e){
-      const href=this.getAttribute('href');
-      if(!href || href.startsWith('http')) return;
-      e.preventDefault();
-      document.querySelector('.container').style.opacity=0;
-      setTimeout(()=> location.href = href, 260);
-    });
-  });
-</script>
+  <footer>
+    © 2025 Josué Archetti - Todos os direitos reservados.
+  </footer>
 </body>
 </html>
