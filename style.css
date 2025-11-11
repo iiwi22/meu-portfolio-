@@ -1,199 +1,100 @@
-/* ======= TEMA GERAL ======= */
-body {
-  background-color: #0e1a24; /* tom azul escuro mais frio */
-  color: #e4e4e4;
-  font-family: 'Poppins', Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
-  animation: fadeIn 0.8s ease-in;
+  box-sizing: border-box;
+  font-family: "Courier New", monospace;
 }
 
-/* ======= ANIMAÇÃO ======= */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+body {
+  background-color: #000;
+  color: #00ff99;
+  transition: all 0.3s ease;
 }
 
-/* ======= CABEÇALHO ======= */
 header {
-  background: #14212d;
-  text-align: center;
-  padding: 25px;
-  border-bottom: 2px solid #1f3b4d;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  background: #050505;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #00ff99;
 }
 
 header h1 {
-  margin: 10px 0;
-  color: #00bcd4;
-  font-size: 28px;
-  transition: text-shadow 0.3s;
-}
-
-header h1:hover {
-  text-shadow: 0 0 10px #00bcd4;
-}
-
-.avatar {
-  width: 100px;
-  border-radius: 50%;
-  border: 2px solid #00bcd4;
-  transition: transform 0.3s;
-}
-
-.avatar:hover {
-  transform: scale(1.1);
-}
-
-/* ======= NAVEGAÇÃO ======= */
-nav {
-  margin-top: 10px;
+  font-size: 24px;
+  color: #00ff99;
+  text-shadow: 0 0 10px #00ff99;
 }
 
 nav a {
-  color: #fff;
-  margin: 0 12px;
+  color: #00ff99;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s, border-bottom 0.3s;
+  margin: 0 10px;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  color: #00bcd4;
-  border-bottom: 2px solid #00bcd4;
+  text-shadow: 0 0 10px #00ff99;
 }
 
-/* ======= CONTEÚDO ======= */
-main {
-  padding: 30px;
-  max-width: 900px;
-  margin: auto;
-  line-height: 1.6;
+section {
+  padding: 40px;
   text-align: center;
 }
 
-h2 {
-  color: #00bcd4;
+img.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid #00ff99;
   margin-bottom: 20px;
+  box-shadow: 0 0 15px #00ff99;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  background: #16222f;
-  margin: 8px auto;
-  padding: 10px;
-  border-radius: 6px;
-  width: 80%;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-ul li:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 10px rgba(0,188,212,0.3);
-}
-
-/* ======= PROJETOS ======= */
-.projetos {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.projeto {
-  background: #16222f;
-  border: 1px solid #2b3f52;
-  padding: 10px;
-  width: 300px;
+.project {
+  background: #050505;
+  border: 1px solid #00ff99;
   border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 0 10px #00ff99;
+  transition: 0.3s;
 }
 
-.projeto:hover {
+.project:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0,188,212,0.4);
 }
 
-/* ======= FORMULÁRIO ======= */
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  background: #16222f;
-  padding: 25px;
-  border-radius: 10px;
-  max-width: 500px;
+  align-items: center;
+  max-width: 400px;
   margin: auto;
 }
 
-input, textarea, button {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 15px;
-}
-
 input, textarea {
-  background: #1f2f3d;
-  color: #fff;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background: #000;
+  border: 1px solid #00ff99;
+  color: #00ff99;
+  border-radius: 5px;
 }
 
 button {
-  background: #00bcd4;
-  color: #fff;
+  background: #00ff99;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
   cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.2s;
+  border-radius: 5px;
+  transition: 0.3s;
 }
 
 button:hover {
-  background: #0097a7;
-  transform: scale(1.03);
-}
-
-/* ======= REDES ======= */
-.redes {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.redes a {
-  color: #00bcd4;
-  text-decoration: none;
-  margin: 0 10px;
-  transition: color 0.3s;
-}
-
-.redes a:hover {
-  color: #0097a7;
-}
-
-/* ======= RODAPÉ ======= */
-footer {
-  background: #14212d;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-  font-size: 14px;
-  color: #999;
-}
-
-/* ======= RESPONSIVIDADE ======= */
-@media (max-width: 700px) {
-  nav a {
-    display: inline-block;
-    margin: 8px;
-  }
-
-  ul li {
-    width: 95%;
-  }
-
-  .projeto {
-    width: 90%;
-  }
+  background: #00cc66;
+  box-shadow: 0 0 10px #00ff99;
 }
