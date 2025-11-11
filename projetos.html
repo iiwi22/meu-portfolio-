@@ -1,43 +1,93 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Projetos - Josué Archetti</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projetos — Josué Archetti</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Josué Archetti</h1>
-    <nav>
+  <header class="header">
+    <div class="brand">
+      <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden>
+        <rect width="24" height="24" rx="5" fill="#001"/>
+        <path d="M3 12h18" stroke="#00ff99" stroke-width="1.2" opacity="0.9"/>
+      </svg>
+      <div>
+        <h1>Josué Archetti</h1>
+        <small>Future Cybersecurity Specialist</small>
+      </div>
+    </div>
+
+    <nav class="nav">
       <a href="index.html">Início</a>
-      <a href="sobre.html">Sobre Mim</a>
+      <a href="sobre.html">Sobre</a>
       <a href="habilidades.html">Habilidades</a>
-      <a href="projetos.html">Projetos</a>
+      <a href="projetos.html" class="active">Projetos</a>
       <a href="contato.html">Contato</a>
     </nav>
   </header>
 
-  <section>
-    <h2>Meus Projetos</h2>
+  <main class="container">
+    <section class="card">
+      <h2>Projetos e Estudos</h2>
 
-    <div class="project">
-      <img src="https://i.imgur.com/DZpSxS7.png" alt="Projeto 1" width="100%">
-      <h3>Scanner de Rede</h3>
-      <p>Desenvolvimento de um script simples em Python para varredura e análise de IPs locais, simulando etapas básicas de um pentest.</p>
-    </div>
+      <div class="grid" style="margin-top:12px">
+        <!-- Repetir blocos de projeto: quando tiver imagens reais, substitua o SVG pela <img src="seu-arquivo.png"> -->
+        <article class="project card">
+          <div class="thumb">
+            <!-- thumb SVG -->
+            <svg width="100%" height="140" viewBox="0 0 400 140" preserveAspectRatio="none">
+              <rect width="100%" height="100%" fill="#050505"/>
+              <text x="16" y="70" fill="#00ff99" font-size="14" font-family="monospace">Scanner de Rede — demo</text>
+            </svg>
+          </div>
+          <div class="info">
+            <h3>Scanner de Rede</h3>
+            <p>Script Python para análise de IPs e portas em laboratório controlado. Documentei resultados e recomendações de mitigação.</p>
+          </div>
+        </article>
 
-    <div class="project">
-      <img src="https://i.imgur.com/GN9W4Dk.png" alt="Projeto 2" width="100%">
-      <h3>Website Portfólio</h3>
-      <p>Criação deste portfólio pessoal, com design dark e identidade visual hacker, feito com HTML, CSS e JavaScript puro.</p>
-    </div>
+        <article class="project card">
+          <div class="thumb">
+            <svg width="100%" height="140" viewBox="0 0 400 140" preserveAspectRatio="none">
+              <rect width="100%" height="100%" fill="#050505"/>
+              <text x="16" y="70" fill="#00ff99" font-size="14" font-family="monospace">Portfólio Web</text>
+            </svg>
+          </div>
+          <div class="info">
+            <h3>Portfólio Web</h3>
+            <p>Apresentação das minhas competências e projetos — simples, rápido e responsivo.</p>
+          </div>
+        </article>
 
-    <div class="project">
-      <img src="https://i.imgur.com/KjY1wEB.png" alt="Projeto 3" width="100%">
-      <h3>Simulador de Ataque DDoS</h3>
-      <p>Simulação controlada para estudo sobre impacto de requisições simultâneas e defesa contra ataques de negação de serviço.</p>
-    </div>
+        <article class="project card">
+          <div class="thumb">
+            <svg width="100%" height="140" viewBox="0 0 400 140" preserveAspectRatio="none">
+              <rect width="100%" height="100%" fill="#050505"/>
+              <text x="16" y="70" fill="#00ff99" font-size="14" font-family="monospace">Simulações de Ataque</text>
+            </svg>
+          </div>
+          <div class="info">
+            <h3>Simulações de Ataque (estudo)</h3>
+            <p>Testes em ambiente controlado para avaliar impacto e medidas de defesa.</p>
+          </div>
+        </article>
+      </div>
 
-  </section>
+    </section>
+  </main>
+
+<script>
+  document.querySelectorAll('.nav a').forEach(a=>{
+    a.addEventListener('click', function(e){
+      const href=this.getAttribute('href');
+      if(!href || href.startsWith('http')) return;
+      e.preventDefault();
+      document.querySelector('.container').style.opacity=0;
+      setTimeout(()=> location.href = href, 260);
+    });
+  });
+</script>
 </body>
 </html>
