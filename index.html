@@ -1,26 +1,145 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Josué Archetti | Cybersecurity</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Josué Archetti — Cybersecurity</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Josué Archetti</h1>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="sobre.html">Sobre Mim</a>
+  <header class="header">
+    <div class="brand">
+      <!-- pequeno svg como logo -->
+      <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden>
+        <rect width="24" height="24" rx="5" fill="#001"/>
+        <path d="M3 12h18" stroke="#00ff99" stroke-width="1.2" opacity="0.9"/>
+      </svg>
+      <div>
+        <h1>Josué Archetti</h1>
+        <small>Future Cybersecurity Specialist</small>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" class="active">Início</a>
+      <a href="sobre.html">Sobre</a>
       <a href="habilidades.html">Habilidades</a>
       <a href="projetos.html">Projetos</a>
       <a href="contato.html">Contato</a>
     </nav>
   </header>
 
-  <section>
-    <img src="https://i.imgur.com/Yu1vQ7R.png" alt="Avatar Hacker" class="avatar">
-    <h2>Bem-vindo ao meu Portfólio</h2>
-    <p>Explorando o universo da segurança digital e tecnologia.</p>
-  </section>
+  <main class="container page-enter page-enter-active" id="main">
+    <section class="hero card">
+      <div class="avatar-wrap">
+        <!-- avatar Anonymous SVG (inline) -->
+        <svg class="avatar" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar Anonymous">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#001"/><stop offset="1" stop-color="#002"/></linearGradient>
+          </defs>
+          <rect width="100%" height="100%" fill="transparent"/>
+          <!-- capuz -->
+          <path d="M256 40c-70 0-120 44-140 90 6 6 22 18 22 18s22-34 118-34 118 34 118 34 16-12 22-18c-20-46-70-90-140-90z" fill="#0b0b0b"/>
+          <!-- sombra do rosto (escondido) -->
+          <ellipse cx="256" cy="260" rx="110" ry="115" fill="#000"/>
+          <!-- gola / terno -->
+          <path d="M150 360c40 40 120 42 156 42s116-2 156-42l-22 60c-52 28-180 28-236 0z" fill="#030303"/>
+          <!-- detalhe neon (gaze) -->
+          <g opacity="0.9" fill="none" stroke="#00ff99" stroke-width="1.8">
+            <path d="M120 420c60 38 200 38 272 0"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero-intro">
+        <h2>Olha o terminal — bem-vindo</h2>
+        <p class="lead">Sou Josué Archetti, 22 anos. Entusiasta de cibersegurança, fascinado por redes, protocolos e defesa digital. Aqui você encontra meu trabalho, habilidades e formas de contato — tudo com identidade hacker profissional.</p>
+
+        <p style="color:var(--muted); font-size:13px; margin-top:8px;">
+          Navegue pelos projetos para ver demonstrações técnicas e estudos de caso; visite Contato para me enviar uma mensagem.
+        </p>
+      </div>
+    </section>
+
+    <section style="margin-top:18px;">
+      <div class="card">
+        <h3 style="margin-bottom:8px">Resumo Rápido</h3>
+        <p style="color:var(--muted)">22 anos • Entusiasta em Cybersecurity • Estudo pentest, análise de vulnerabilidades e redes. Autodidata, focado em aprendizado prático e ético.</p>
+      </div>
+    </section>
+
+    <section style="margin-top:18px;">
+      <div class="card">
+        <h3>Projetos (preview)</h3>
+        <div class="grid" style="margin-top:12px">
+          <!-- Project placeholders (SVG thumbs) -->
+          <article class="project card">
+            <div class="thumb">
+              <svg width="100%" height="140" viewBox="0 0 400 140" preserveAspectRatio="none">
+                <rect width="100%" height="100%" fill="#050505"/>
+                <g transform="translate(16,18)" fill="#00ff99" opacity="0.95">
+                  <rect x="0" y="0" width="120" height="80" rx="8" fill="#001"/>
+                </g>
+                <text x="160" y="70" fill="#00ff99" font-size="16" font-family="monospace">Scanner de Rede — preview</text>
+              </svg>
+            </div>
+            <div class="info">
+              <h3>Scanner de Rede</h3>
+              <p>Script em Python para varredura controlada de IPs na rede local — estudo de portas e fingerprinting (uso educacional).</p>
+            </div>
+          </article>
+
+          <article class="project card">
+            <div class="thumb">
+              <svg width="100%" height="140" viewBox="0 0 400 140" preserveAspectRatio="none">
+                <rect width="100%" height="100%" fill="#050505"/>
+                <g transform="translate(18,18)" fill="#00ff99" opacity="0.9">
+                  <circle cx="70" cy="40" r="30" fill="#001"/>
+                </g>
+                <text x="160" y="70" fill="#00ff99" font-size="16" font-family="monospace">Portfólio Web</text>
+              </svg>
+            </div>
+            <div class="info">
+              <h3>Website Portfólio</h3>
+              <p>Este site — design dark, responsivo, com foco em apresentação de projetos técnicos.</p>
+            </div>
+          </article>
+
+          <article class="project card">
+            <div class="thumb">
+              <svg width="100%" height="140" viewBox="0 0 400 140" preserveAspectRatio="none">
+                <rect width="100%" height="100%" fill="#050505"/>
+                <text x="20" y="70" fill="#00ff99" font-size="16" font-family="monospace">Simulador DDoS</text>
+              </svg>
+            </div>
+            <div class="info">
+              <h3>Simulador DDoS (estudo)</h3>
+              <p>Ambiente controlado para análise de impacto e mitigações — uso exclusivo para pesquisa/estudo.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div style="margin-bottom:8px">LinkedIn • GitHub • Email</div>
+      <div style="color:var(--muted)">© Josué Archetti — Portfólio acadêmico</div>
+    </footer>
+  </main>
+
+<script>
+  /* Navegação com fade suave entre páginas */
+  document.querySelectorAll('.nav a').forEach(a=>{
+    a.addEventListener('click', function(e){
+      // se link interno
+      const href=this.getAttribute('href');
+      if(!href || href.startsWith('http')) return;
+      e.preventDefault();
+      document.querySelector('#main').classList.remove('page-enter-active');
+      document.querySelector('#main').style.opacity=0;
+      setTimeout(()=> location.href = href, 260);
+    });
+  });
+</script>
 </body>
 </html>
