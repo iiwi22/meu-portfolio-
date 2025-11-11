@@ -4,34 +4,79 @@
   <meta charset="UTF-8">
   <title>Contato - Josué Archetti</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #111;
+      padding: 20px 0;
+      box-shadow: 0 0 15px rgba(0,255,153,0.3);
+    }
+    h1 {
+      color: #00ff99;
+      font-weight: 700;
+      font-size: 28px;
+    }
+    .social {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+    .social a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      background: #111;
+      padding: 15px 25px;
+      border: 2px solid #00ff99;
+      border-radius: 15px;
+      width: 250px;
+      transition: 0.3s;
+    }
+    .social a:hover {
+      background: #00ff99;
+      color: #000;
+    }
+    .social img {
+      width: 35px;
+      height: 35px;
+    }
+    footer {
+      margin-top: 50px;
+      padding: 15px;
+      border-top: 1px solid #00ff99;
+      color: #888;
+      font-size: 14px;
+    }
+  </style>
 </head>
-<body class="fade-in">
+<body>
   <header>
-    <h1>Josué Archetti</h1>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="sobre.html">Sobre Mim</a>
-      <a href="habilidades.html">Habilidades</a>
-      <a href="projetos.html">Projetos</a>
-      <a href="contato.html">Contato</a>
-    </nav>
+    <h1>Contato</h1>
   </header>
 
   <main>
-    <h2>Entre em Contato</h2>
-    <form id="formContato">
-      <input type="text" id="nome" placeholder="Seu nome" required>
-      <input type="email" id="email" placeholder="Seu e-mail" required>
-      <textarea id="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-
-    <p>Minhas redes profissionais:</p>
-    <p>
-      <a href="https://github.com/" target="_blank">GitHub</a> |
-      <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
-    </p>
+    <h2>Entre em contato comigo</h2>
+    <div class="social">
+      <a href="https://wa.me/5599999999999" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> WhatsApp
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"> Instagram
+      </a>
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook"> Facebook
+      </a>
+    </div>
   </main>
 
   <footer>
