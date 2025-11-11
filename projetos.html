@@ -1,93 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projetos — Josué Archetti</title>
+  <meta charset="UTF-8">
+  <title>Projetos - Josué Archetti</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="header">
-    <div class="brand">
-      <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden>
-        <rect width="24" height="24" rx="5" fill="#001"/>
-        <path d="M3 12h18" stroke="#00ff99" stroke-width="1.2" opacity="0.9"/>
-      </svg>
-      <div>
-        <h1>Josué Archetti</h1>
-        <small>Future Cybersecurity Specialist</small>
-      </div>
-    </div>
-
-    <nav class="nav">
-      <a href="index.html">Início</a>
-      <a href="sobre.html">Sobre</a>
+  <header>
+    <h1>Josué Archetti</h1>
+    <nav>
+      <a href="index.html">Sobre Mim</a>
       <a href="habilidades.html">Habilidades</a>
-      <a href="projetos.html" class="active">Projetos</a>
+      <a href="projetos.html">Projetos</a>
       <a href="contato.html">Contato</a>
     </nav>
   </header>
 
-  <main class="container">
-    <section class="card">
-      <h2>Projetos e Estudos</h2>
+  <main>
+    <h2>Projetos</h2>
+    <p>Aqui estão alguns dos projetos que desenvolvi e participei:</p>
 
-      <div class="grid" style="margin-top:12px">
-        <!-- Repetir blocos de projeto: quando tiver imagens reais, substitua o SVG pela <img src="seu-arquivo.png"> -->
-        <article class="project card">
-          <div class="thumb">
-            <!-- thumb SVG -->
-            <svg width="100%" height="140" viewBox="0 0 400 140" preserveAspectRatio="none">
-              <rect width="100%" height="100%" fill="#050505"/>
-              <text x="16" y="70" fill="#00ff99" font-size="14" font-family="monospace">Scanner de Rede — demo</text>
-            </svg>
-          </div>
-          <div class="info">
-            <h3>Scanner de Rede</h3>
-            <p>Script Python para análise de IPs e portas em laboratório controlado. Documentei resultados e recomendações de mitigação.</p>
-          </div>
-        </article>
-
-        <article class="project card">
-          <div class="thumb">
-            <svg width="100%" height="140" viewBox="0 0 400 140" preserveAspectRatio="none">
-              <rect width="100%" height="100%" fill="#050505"/>
-              <text x="16" y="70" fill="#00ff99" font-size="14" font-family="monospace">Portfólio Web</text>
-            </svg>
-          </div>
-          <div class="info">
-            <h3>Portfólio Web</h3>
-            <p>Apresentação das minhas competências e projetos — simples, rápido e responsivo.</p>
-          </div>
-        </article>
-
-        <article class="project card">
-          <div class="thumb">
-            <svg width="100%" height="140" viewBox="0 0 400 140" preserveAspectRatio="none">
-              <rect width="100%" height="100%" fill="#050505"/>
-              <text x="16" y="70" fill="#00ff99" font-size="14" font-family="monospace">Simulações de Ataque</text>
-            </svg>
-          </div>
-          <div class="info">
-            <h3>Simulações de Ataque (estudo)</h3>
-            <p>Testes em ambiente controlado para avaliar impacto e medidas de defesa.</p>
-          </div>
-        </article>
-      </div>
-
-    </section>
+    <img src="https://picsum.photos/800/400?random=1" alt="Projeto 1" class="projeto">
+    <img src="https://picsum.photos/800/400?random=2" alt="Projeto 2" class="projeto">
+    <img src="https://picsum.photos/800/400?random=3" alt="Projeto 3" class="projeto">
   </main>
 
-<script>
-  document.querySelectorAll('.nav a').forEach(a=>{
-    a.addEventListener('click', function(e){
-      const href=this.getAttribute('href');
-      if(!href || href.startsWith('http')) return;
-      e.preventDefault();
-      document.querySelector('.container').style.opacity=0;
-      setTimeout(()=> location.href = href, 260);
-    });
-  });
-</script>
+  <footer>
+    © 2025 Josué Archetti - Todos os direitos reservados.
+  </footer>
 </body>
 </html>
