@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Josué Archetti - Portfólio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <style>
     body {
       background-color: #0a0a0a;
@@ -16,33 +17,37 @@
     header {
       background: #111;
       padding: 20px 0;
-      box-shadow: 0 0 15px rgba(0,255,153,0.3);
+      box-shadow: 0 0 15px rgba(0,255,153,0.18);
     }
 
     h1 {
       color: #00ff99;
       font-weight: 700;
       font-size: 28px;
+      margin: 0;
     }
 
     .avatar {
       display: flex;
       justify-content: center;
-      margin: 30px 0;
+      margin: 30px 0 10px 0;
     }
 
-    .avatar img {
+    /* caixinha e máscara verde neon */
+    .avatar .wrap {
       width: 200px;
       height: 200px;
       border-radius: 50%;
       border: 3px solid #00ff99;
-      box-shadow: 0 0 25px rgba(0, 255, 153, 0.4);
-      object-fit: cover;
-      background-color: #000;
+      box-shadow: 0 0 25px rgba(0, 255, 153, 0.18);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: linear-gradient(180deg, #020202 0%, #0a0a0a 100%);
     }
 
     main {
-      max-width: 700px;
+      max-width: 760px;
       margin: auto;
       padding: 20px;
     }
@@ -71,11 +76,16 @@
       text-decoration: none;
       font-weight: 600;
       width: fit-content;
-      transition: 0.3s;
+      transition: 0.18s;
     }
 
     .home-grid a:hover {
       background: #00cc77;
+    }
+
+    @media (max-width:520px){
+      .avatar .wrap { width:150px; height:150px; }
+      h1 { font-size:22px; }
     }
   </style>
 </head>
@@ -86,13 +96,37 @@
 
   <main>
     <div class="avatar">
-      <img src="https://raw.githubusercontent.com/ItzNotMoe/anonymous-mask/main/mask.png" alt="Avatar Anonymous">
+      <div class="wrap" aria-hidden="true">
+        <!-- SVG inline: gato estilizado (não depende de link externo) -->
+        <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar gato">
+          <!-- fundo circular (transparente) -->
+          <circle cx="60" cy="60" r="58" fill="#020202"/>
+          <!-- orelhas -->
+          <path d="M20 30 L34 6 L48 30 Z" fill="#0b0b0b"/>
+          <path d="M100 30 L86 6 L72 30 Z" fill="#0b0b0b"/>
+          <!-- rosto -->
+          <ellipse cx="60" cy="68" rx="36" ry="30" fill="#111"/>
+          <!-- olhos -->
+          <ellipse cx="44" cy="63" rx="6" ry="10" fill="#00ff99"/>
+          <ellipse cx="76" cy="63" rx="6" ry="10" fill="#00ff99"/>
+          <!-- brilho olhos -->
+          <circle cx="42.2" cy="59.5" r="1.6" fill="#d8fff0"/>
+          <circle cx="74.2" cy="59.5" r="1.6" fill="#d8fff0"/>
+          <!-- nariz -->
+          <path d="M60 74 L55 80 L65 80 Z" fill="#00cc77"/>
+          <!-- bigodes -->
+          <path d="M30 74 C38 72 48 72 56 74" stroke="#0f0f0f" stroke-width="1.5" fill="none"/>
+          <path d="M84 74 C76 72 66 72 58 74" stroke="#0f0f0f" stroke-width="1.5" fill="none"/>
+          <!-- contorno neon leve -->
+          <circle cx="60" cy="60" r="44" fill="none" stroke="#00ff99" stroke-opacity="0.06" stroke-width="4"/>
+        </svg>
+      </div>
     </div>
 
     <h2>Bem-vindo ao meu Portfólio</h2>
     <p>Sou Josué Archetti, estudante de Ciências da Computação e apaixonado por tecnologia, cibersegurança e o mundo digital. Aqui você encontrará informações sobre mim, minhas habilidades, projetos e formas de contato.</p>
 
-    <div class="home-grid">
+    <div class="home-grid" role="navigation" aria-label="Links principais">
       <a href="sobre.html">🧠 Sobre Mim</a>
       <a href="habilidades.html">⚙️ Habilidades</a>
       <a href="projetos.html">💻 Projetos</a>
